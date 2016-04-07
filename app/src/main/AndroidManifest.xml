@@ -36,10 +36,6 @@
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
 
-        <activity
-            android:name=".Main22Activity"
-            android:label="@string/title_activity_main22"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

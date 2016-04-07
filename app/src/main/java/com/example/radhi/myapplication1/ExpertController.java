@@ -9,7 +9,7 @@ public class ExpertController {
     static int MasterNUMCAT=0;
     ArrayList AllExperts = new ArrayList();
     static ArrayList AllCategories = new ArrayList();
-    static String[] a4;
+    static String k ;
 
     public static void AddExpert(ExpertADT b){
         AllCategories.add(ExpertADT.getIDNumber(b), ExpertADT.getParametersOptions(b));
@@ -40,26 +40,19 @@ public class ExpertController {
         MeteorologistController.compareAnswer(d);
            }
 
-    public static void CompareSolvedAnswer(ExpertADT c,ExpertADT d, ExpertADT e) {
+    public static String CompareSolvedAnswer(ExpertADT c,ExpertADT d, ExpertADT e) {
 
         ArrayList a = ExpertADT.getSolveAnswer(c);
         ArrayList a1 = ExpertADT.getSolveAnswer(d);
         ArrayList a2 = ExpertADT.getSolveAnswer(e);
 
+        a.retainAll(a1);
+        a2.retainAll(a);
 
-        for (int i = 0; i < a.size(); i++) {
-            String z = a.get(i).toString();
-            for (int j = 0; j < a1.size(); j++) {
-                String y = a1.get(j).toString();
-                for (int k = 0; k < a2.size(); k++) {
-                    String x = a2.get(k).toString();
-                    if (z == y & y == x & z == x) {
-                        a4[0]=z;
-
-
-                    }
-                }
-            }
+       int i =  a2.size();
+        for (int j=0;j<i;j++){
+            k = k + "" + a2.get(j).toString();
         }
+        return k;
     }
 }

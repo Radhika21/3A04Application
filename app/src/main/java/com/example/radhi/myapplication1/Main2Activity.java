@@ -53,6 +53,18 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
         //super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main2);
 
+        IdentifyPhenomena a = new IdentifyPhenomena();
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                IdentifyPhenomena  cls2= new IdentifyPhenomena();
+                Snackbar.make(view, cls2.b, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
