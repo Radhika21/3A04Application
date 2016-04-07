@@ -19,9 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main2Activity extends Activity implements AdapterView.OnItemSelectedListener {
-    ArrayList<String> Answers = new ArrayList<String>();
+    public static ArrayList<String> Answers = new ArrayList<String>();
+    private int blah = 0;
 
-    //private MyService myservice = new MyService();
+
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
@@ -30,20 +31,21 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // On selecting a spinner item
+        if(blah == position){
+            return;
+        }
+        blah = position;
         String item = parent.getItemAtPosition(position).toString();
         // Showing selected spinner item
-
         Answers.add(item);
+        blah = 0;
+
         Toast.makeText(parent.getContext(), "Selected: " + Answers.get(Answers.size()-1) + Answers.size(), Toast.LENGTH_LONG).show();
 
 
     }
 
-    public void setFillViewport (boolean fillViewport){
-        android:setFillViewport(true);
-    }
-
-   @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
@@ -56,7 +58,8 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
        spinner1.setOnItemSelectedListener(this);
        List<String> ColorOptions = new ArrayList<String>();
-       { ColorOptions.add("red");
+        {  ColorOptions.add("Select Color");
+            ColorOptions.add("red");
            ColorOptions.add("white");
            ColorOptions.add("rainbow");
            ColorOptions.add("blue");
@@ -75,12 +78,15 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
         // attaching data adapter to spinner
         spinner1.setAdapter(dataAdapter1);
 
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
 
        spinner2.setOnItemSelectedListener(this);
        List<String> OpacityOptions = new ArrayList<String>();
-       {OpacityOptions.add("opauqe");
+       {OpacityOptions.add("Select Opacity");
+           OpacityOptions.add("opauqe");
            OpacityOptions.add("translucent");
            OpacityOptions.add("transparent");
            OpacityOptions.add("not applicable");}
@@ -98,7 +104,8 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
        spinner3.setOnItemSelectedListener(this);
        List<String> ShapeOptions = new ArrayList<String>();
-       {ShapeOptions.add("linear");
+       {ShapeOptions.add("Select Shape");
+           ShapeOptions.add("linear");
            ShapeOptions.add("hourglass");
            ShapeOptions.add("not applicable");
            ShapeOptions.add("oval");
@@ -122,7 +129,8 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
        spinner4.setOnItemSelectedListener(this);
        List<String> ElevationOptions = new ArrayList<String>();
-       {ElevationOptions.add("sky");
+       {ElevationOptions.add("Select Elevation");
+           ElevationOptions.add("sky");
            ElevationOptions.add("horizon");
            ElevationOptions.add("not applicable");
            ElevationOptions.add("ground");}
@@ -141,7 +149,8 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
        spinner5.setOnItemSelectedListener(this);
        List<String> DensityOptions = new ArrayList<String>();
-       {DensityOptions.add("solid");
+       {DensityOptions.add("Select Density");
+           DensityOptions.add("solid");
            DensityOptions.add("liquid");
            DensityOptions.add("gas");
            DensityOptions.add("not applicable");}
@@ -160,7 +169,8 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
        spinner6.setOnItemSelectedListener(this);
        List<String> MoistnessOptions = new ArrayList<String>();
-       {MoistnessOptions.add("yes");
+       {MoistnessOptions.add("Select Moistness");
+           MoistnessOptions.add("yes");
            MoistnessOptions.add("no");}
 
        // Creating adapter for spinner

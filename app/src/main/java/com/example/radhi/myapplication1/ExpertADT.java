@@ -1,6 +1,7 @@
 package com.example.radhi.myapplication1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Radhi on 4/6/2016.
@@ -9,9 +10,23 @@ public class ExpertADT {
     int IDNumber;
     static int NumberOfCategories;
     static ArrayList ParametersOptions = new ArrayList();
+    static ArrayList DB = new ArrayList();
+    static ArrayList solveAnswer = new ArrayList();
 
 
 
+    public static ArrayList getSolveAnswer() {
+        return solveAnswer;
+    }
+    public static void setSolveAnswer(int i, ExpertADT a) {
+        a.solveAnswer.add(i, a.DB.get(i));;
+    }
+    public static ArrayList getDB(ExpertADT a) {
+        return a.DB;
+    }
+    public static void setDB(ArrayList dB, ExpertADT b) {
+        b.DB = dB;
+    }
     public static int getNumCat(ExpertADT a) {
         return a.NumberOfCategories;
     }
@@ -41,4 +56,5 @@ public class ExpertADT {
 		CategoryOptions.addAll(CategoryOptions);
 
 	}*/
+
 }
