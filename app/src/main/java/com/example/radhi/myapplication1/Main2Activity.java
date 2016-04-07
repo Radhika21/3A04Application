@@ -8,10 +8,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +39,10 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
     }
 
+    public void setFillViewport (boolean fillViewport){
+        android:setFillViewport(true);
+    }
+
    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +50,7 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
 
@@ -67,6 +74,7 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
         // attaching data adapter to spinner
         spinner1.setAdapter(dataAdapter1);
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
 
@@ -108,6 +116,7 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
 
        // attaching data adapter to spinner
        spinner3.setAdapter(dataAdapter3);
+       //coment
        ////////////////////////////////////////////////////////////////////////////////////////////////////////
        Spinner spinner4 = (Spinner) findViewById(R.id.spinner4);
 
@@ -127,6 +136,43 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
        // attaching data adapter to spinner
        spinner4.setAdapter(dataAdapter4);
        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+       Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
+
+       spinner5.setOnItemSelectedListener(this);
+       List<String> DensityOptions = new ArrayList<String>();
+       {DensityOptions.add("solid");
+           DensityOptions.add("liquid");
+           DensityOptions.add("gas");
+           DensityOptions.add("not applicable");}
+
+       // Creating adapter for spinner
+       ArrayAdapter<String> dataAdapter5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, DensityOptions);
+
+       // Drop down layout style - list view with radio button
+       dataAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+       // attaching data adapter to spinner
+       spinner5.setAdapter(dataAdapter5);
+       /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+       Spinner spinner6 = (Spinner) findViewById(R.id.spinner6);
+
+       spinner6.setOnItemSelectedListener(this);
+       List<String> MoistnessOptions = new ArrayList<String>();
+       {MoistnessOptions.add("yes");
+           MoistnessOptions.add("no");}
+
+       // Creating adapter for spinner
+       ArrayAdapter<String> dataAdapter6 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, MoistnessOptions);
+
+       // Drop down layout style - list view with radio button
+       dataAdapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+       // attaching data adapter to spinner
+       spinner6.setAdapter(dataAdapter6);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
