@@ -27,26 +27,21 @@ public class ExpertController {
 
     public static void divideCompare(ArrayList a){
         ArrayList b = new ArrayList();
-        for (int i=0; i < ExpertADT.getNumCat(PhysicistController.Physicist1); i++){
+        for (int i=0; i < 5; i++){
             b.add(a.get(i));}
         PhysicistController.compareAnswer(b);
         ArrayList c = new ArrayList();
-        for (int i=6; i < 6+ExpertADT.getNumCat(FieldController.Field); i++){
+        for (int i=5; i < 7; i++){
             c.add(a.get(i));}
         FieldController.compareAnswer(c);
         ArrayList d = new ArrayList();
-        for (int i=9; i < 9+ExpertADT.getNumCat(MeteorologistController.Meteorologist); i++){
+        for (int i=7; i < 10; i++){
             d.add(a.get(i));}
         MeteorologistController.compareAnswer(d);
-        ArrayList e = new ArrayList();
-        for (int i=12; i < 12+ExpertADT.getNumCat(MeteorologistController.Meteorologist); i++){
-            e.add(a.get(i));}
-        MeteorologistController.compareAnswer(e);
+           }
 
-    }
+    public static void CompareSolvedAnswer(ExpertADT c,ExpertADT d, ExpertADT e) {
 
-    public static String CompareSolvedAnswer(ExpertADT c,ExpertADT d, ExpertADT e) {
-        String w;
         ArrayList a = ExpertADT.getSolveAnswer(c);
         ArrayList a1 = ExpertADT.getSolveAnswer(d);
         ArrayList a2 = ExpertADT.getSolveAnswer(e);
@@ -59,12 +54,12 @@ public class ExpertController {
                 for (int k = 0; k < a2.size(); k++) {
                     String x = a2.get(k).toString();
                     if (z == y & y == x & z == x) {
-                        w = z;
+                        a4[0]=z;
 
 
                     }
                 }
             }
-        }return w;}
+        }
     }
 }

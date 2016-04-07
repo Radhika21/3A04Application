@@ -19,7 +19,7 @@ public class MeteorologistController {
     }
 
     public static void compareAnswer(ArrayList b){
-        for(int i=0; i <ExpertADT.getDB(Meteorologist).size();){
+        for(int i=0; i < 3; ){
             if (MeteorologistDatabase.getSun(MeteorologistDatabase.getInfo(i)) == b.get(0) & MeteorologistDatabase.getTemp(MeteorologistDatabase.getInfo(i)) == b.get(1)
                     & MeteorologistDatabase.getPrecip(MeteorologistDatabase.getInfo(i)) == b.get(2)){
                 ExpertADT.setSolveAnswer(i,Meteorologist);

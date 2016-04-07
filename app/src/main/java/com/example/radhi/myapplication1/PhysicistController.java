@@ -88,7 +88,7 @@ public class PhysicistController {
     // compare Answer1 to each element in Physicist Database
     public static void compareAnswer(ArrayList b){
 
-        for(int i=0; i <ExpertADT.getDB(Physicist1).size();){
+        for(int i=0; i < 5;){
             if (PhysicistDatabase.getColor(PhysicistDatabase.getInfo(i)) == b.get(0) & PhysicistDatabase.getShape(PhysicistDatabase.getInfo(i)) == b.get(1)
                     & PhysicistDatabase.getOpacity(PhysicistDatabase.getInfo(i)) == b.get(2) & PhysicistDatabase.getAngle(PhysicistDatabase.getInfo(i)) == b.get(3)
                     &PhysicistDatabase.getElevation(PhysicistDatabase.getInfo(i)) == b.get(4) ){

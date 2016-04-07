@@ -14,10 +14,7 @@ public class IdentifyPhenomena {
 
     }
 
-    public static void main(String [ ] args)
-    {
-      IdentifyPhenomena.IdentifyPhenomena();
-    }
+
 }
 
 

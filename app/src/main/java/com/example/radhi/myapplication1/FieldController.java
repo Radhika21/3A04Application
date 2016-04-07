@@ -13,13 +13,13 @@ public class FieldController {
     public FieldController(){
         ExpertADT Field = new ExpertADT();
         //ExpertADT.setParametersOptions(Meteorologist, ParametersOptions);
-        ExpertADT.setNumCat(Field, 3);
+        ExpertADT.setNumCat(Field, 2);
         ExpertADT.setIDNumber(Field, 0);
         ExpertADT.setDB(FieldExpertDatabase.FData, Field);
     }
 
     public static void compareAnswer(ArrayList b){
-        for(int i=0; i <ExpertADT.getDB(Field).size();){
+        for(int i=0; i < 2;){
             if (FieldExpertDatabase.getDensity(FieldExpertDatabase.getInfo(i)) == b.get(0) & FieldExpertDatabase.getMoistness(FieldExpertDatabase.getInfo(i)) == b.get(1))
                 ExpertADT.setSolveAnswer(i,Field);
             else {i = i + 1;}
