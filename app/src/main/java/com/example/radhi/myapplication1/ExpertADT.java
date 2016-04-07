@@ -11,13 +11,15 @@ public class ExpertADT {
     static int NumberOfCategories;
     static ArrayList ParametersOptions = new ArrayList();
     static ArrayList DB = new ArrayList();
+
     static ArrayList solveAnswer = new ArrayList();
 
 
 
-    public static ArrayList getSolveAnswer() {
-        return solveAnswer;
+    public static ArrayList getSolveAnswer(ExpertADT a) {
+        return a.solveAnswer;
     }
+
     public static void setSolveAnswer(int i, ExpertADT a) {
         a.solveAnswer.add(i, a.DB.get(i));;
     }

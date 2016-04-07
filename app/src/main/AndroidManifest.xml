@@ -27,7 +27,7 @@
         <activity
             android:name=".Main3Activity"
             android:label="@string/title_activity_main3"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <Spinner
             android:id="@+id/spinner1"
@@ -36,6 +36,10 @@
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
 
+        <activity
+            android:name=".Main22Activity"
+            android:label="@string/title_activity_main22"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

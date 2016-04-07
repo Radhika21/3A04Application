@@ -20,7 +20,11 @@ public class PhysicistController {
 
     static ArrayList ParametersOptions = new ArrayList();
 
-    static ExpertADT Physicist;
+    public static ExpertADT getPhysicist1() {
+        return Physicist1;
+    }
+
+    static ExpertADT Physicist1;
 
     public PhysicistController(){
      /*   {ColorOptions.add("red");
@@ -54,10 +58,11 @@ public class PhysicistController {
 
 
         ExpertADT Physicist = new ExpertADT();
-        ExpertADT.setParametersOptions(Physicist, ParametersOptions);
-        ExpertADT.setNumCat(Physicist, 6);
-        ExpertADT.setIDNumber(Physicist, 0);
-        ExpertADT.setDB(PhysicistDatabase.PData, Physicist);
+        Physicist1 = Physicist;
+        ExpertADT.setParametersOptions(Physicist1, ParametersOptions);
+        ExpertADT.setNumCat(Physicist1, 6);
+        ExpertADT.setIDNumber(Physicist1, 0);
+        ExpertADT.setDB(PhysicistDatabase.PData, Physicist1);
 
 
 
@@ -74,18 +79,23 @@ public class PhysicistController {
 
     // Physicist Database made from users answers
     //static PhysicistDatabase Answer1 = new PhysicistDatabase(Answer.get(0),Answer.get(1),Answer.get(2), Answer.get(3), Answer.get(4), Answer.get(5));
-
+    String shape;
+    String color;
+    String opacity;
+    String elevation;
+    String angle;
 
     // compare Answer1 to each element in Physicist Database
     public static void compareAnswer(ArrayList b){
 
-        for(int i=0; i <ExpertADT.getDB(Physicist).size();){
-            if (PhysicistDatabase.getShape(PhysicistDatabase.getInfo(i)) == b.get(0) & PhysicistDatabase.getColor(PhysicistDatabase.getInfo(i)) == b.get(1)
-                    & PhysicistDatabase.getSize(PhysicistDatabase.getInfo(i)) == b.get(2) & PhysicistDatabase.getOpacity(PhysicistDatabase.getInfo(i)) == b.get(3)
-                    &PhysicistDatabase.getElevation(PhysicistDatabase.getInfo(i)) == b.get(4) & PhysicistDatabase.getBrightness(PhysicistDatabase.getInfo(i)) == b.get(5)){
-                ExpertADT.setSolveAnswer(i,Physicist);
+        for(int i=0; i <ExpertADT.getDB(Physicist1).size();){
+            if (PhysicistDatabase.getColor(PhysicistDatabase.getInfo(i)) == b.get(0) & PhysicistDatabase.getShape(PhysicistDatabase.getInfo(i)) == b.get(1)
+                    & PhysicistDatabase.getOpacity(PhysicistDatabase.getInfo(i)) == b.get(2) & PhysicistDatabase.getAngle(PhysicistDatabase.getInfo(i)) == b.get(3)
+                    &PhysicistDatabase.getElevation(PhysicistDatabase.getInfo(i)) == b.get(4) ){
+                ExpertADT.setSolveAnswer(i,Physicist1);
             }
             else {i = i + 1;}
+
         }
 
     }

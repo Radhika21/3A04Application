@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn1.setOnClickListener(this);
 
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,12 +44,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
         switch(v.getId()){
             case R.id.button2:
-                startActivity(new Intent(MainActivity.this, Main2Activity.class));;
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
                 break;
             case R.id.button3:
                 startActivity(new Intent(MainActivity.this, Main3Activity.class));
                 break;
-              }
+             }
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

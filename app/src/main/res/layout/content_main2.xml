@@ -87,24 +87,19 @@ android:layout_width="wrap_content"
             android:layout_gravity="center_horizontal" />
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner8"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/spinner8" />
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner9"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/spinner9" />
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner10"
-            android:layout_gravity="center_horizontal" />
-
-
+            android:id="@+id/spinner10" />
 
 
     </LinearLayout>

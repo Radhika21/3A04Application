@@ -27,7 +27,7 @@ public class MeteorologistDatabase {
         MeteorologistDatabase Hail = new MeteorologistDatabase("n/a","cold","yes");
         MeteorologistDatabase Halo = new MeteorologistDatabase("yes","n/a","no");
         MeteorologistDatabase KevinHelmholtzInstability = new MeteorologistDatabase("n/a","n/a","no");
-        MeteorologistDatabase LightPillar = new MeteorologistDatabase("yes","n/a","np");
+        MeteorologistDatabase LightPillar = new MeteorologistDatabase("yes","n/a","no");
         MeteorologistDatabase Lightning = new MeteorologistDatabase("n/a","n/a","thunderstorms");
         MeteorologistDatabase MorningGloryCloud = new MeteorologistDatabase("n/a","n/a","source");
         MeteorologistDatabase NovayaZemiyaEffect = new MeteorologistDatabase("yes","n/a","no");

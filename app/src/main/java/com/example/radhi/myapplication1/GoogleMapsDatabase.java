@@ -83,4 +83,8 @@ public class GoogleMapsDatabase {
     public static String getMaxLat(GoogleMapsDatabase a) {
         return a.maxLat;
     }
+
+    public static GoogleMapsDatabase getInfo(int i){
+        return (GoogleMapsDatabase)GMData.get(i);
+    }
 }
