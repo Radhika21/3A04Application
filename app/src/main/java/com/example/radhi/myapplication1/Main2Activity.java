@@ -66,7 +66,7 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
            ColorOptions.add("green");
            ColorOptions.add("yellow");
            ColorOptions.add("multiple");
-           ColorOptions.add("not applicable");
+           ColorOptions.add("n/a");
            ColorOptions.add("brown");}
 
        // Creating adapter for spinner
@@ -84,15 +84,21 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
 
        spinner2.setOnItemSelectedListener(this);
-       List<String> OpacityOptions = new ArrayList<String>();
-       {OpacityOptions.add("Select Opacity");
-           OpacityOptions.add("opauqe");
-           OpacityOptions.add("translucent");
-           OpacityOptions.add("transparent");
-           OpacityOptions.add("not applicable");}
+        List<String> ShapeOptions = new ArrayList<String>();
+        {ShapeOptions.add("Select Shape");
+            ShapeOptions.add("linear");
+            ShapeOptions.add("hourglass");
+            ShapeOptions.add("n/a");
+            ShapeOptions.add("oval");
+            ShapeOptions.add("spherical");
+            ShapeOptions.add("cylindrical");
+            ShapeOptions.add("arc");
+            ShapeOptions.add("spider-vein");
+            ShapeOptions.add("human-like");}
+
 
        // Creating adapter for spinner
-       ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, OpacityOptions);
+       ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ShapeOptions);
 
        // Drop down layout style - list view with radio button
        dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -103,20 +109,15 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
        Spinner spinner3 = (Spinner) findViewById(R.id.spinner3);
 
        spinner3.setOnItemSelectedListener(this);
-       List<String> ShapeOptions = new ArrayList<String>();
-       {ShapeOptions.add("Select Shape");
-           ShapeOptions.add("linear");
-           ShapeOptions.add("hourglass");
-           ShapeOptions.add("not applicable");
-           ShapeOptions.add("oval");
-           ShapeOptions.add("spherical");
-           ShapeOptions.add("cylindrical");
-           ShapeOptions.add("arc");
-           ShapeOptions.add("spider-vein");
-           ShapeOptions.add("human-like");}
+        List<String> OpacityOptions = new ArrayList<String>();
+        {OpacityOptions.add("Select Opacity");
+            OpacityOptions.add("opauqe");
+            OpacityOptions.add("translucent");
+            OpacityOptions.add("transparent");
+            OpacityOptions.add("n/a");}
 
        // Creating adapter for spinner
-       ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ShapeOptions);
+       ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, OpacityOptions);
 
        // Drop down layout style - list view with radio button
        dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -128,15 +129,16 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
        Spinner spinner4 = (Spinner) findViewById(R.id.spinner4);
 
        spinner4.setOnItemSelectedListener(this);
-       List<String> ElevationOptions = new ArrayList<String>();
-       {ElevationOptions.add("Select Elevation");
-           ElevationOptions.add("sky");
-           ElevationOptions.add("horizon");
-           ElevationOptions.add("not applicable");
-           ElevationOptions.add("ground");}
+        List<String> AngleOptions = new ArrayList<String>();
+        {
+            AngleOptions.add("Select Angle");
+         AngleOptions.add("n/a");
+            AngleOptions.add("varies");
+            AngleOptions.add("45deg");
+        }
 
        // Creating adapter for spinner
-       ArrayAdapter<String> dataAdapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ElevationOptions);
+       ArrayAdapter<String> dataAdapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, AngleOptions);
 
        // Drop down layout style - list view with radio button
        dataAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -148,15 +150,17 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
        Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
 
        spinner5.setOnItemSelectedListener(this);
-       List<String> DensityOptions = new ArrayList<String>();
-       {DensityOptions.add("Select Density");
-           DensityOptions.add("solid");
-           DensityOptions.add("liquid");
-           DensityOptions.add("gas");
-           DensityOptions.add("not applicable");}
+        List<String> ElevationOptions = new ArrayList<String>();
+        {ElevationOptions.add("Select Elevation");
+            ElevationOptions.add("sky");
+            ElevationOptions.add("horizon");
+            ElevationOptions.add("n/a");
+            ElevationOptions.add("ground");}
+
+
 
        // Creating adapter for spinner
-       ArrayAdapter<String> dataAdapter5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, DensityOptions);
+       ArrayAdapter<String> dataAdapter5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ElevationOptions);
 
        // Drop down layout style - list view with radio button
        dataAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -168,13 +172,16 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
        Spinner spinner6 = (Spinner) findViewById(R.id.spinner6);
 
        spinner6.setOnItemSelectedListener(this);
-       List<String> MoistnessOptions = new ArrayList<String>();
-       {MoistnessOptions.add("Select Moistness");
-           MoistnessOptions.add("yes");
-           MoistnessOptions.add("no");}
+        List<String> DensityOptions = new ArrayList<String>();
+        {DensityOptions.add("Select Density");
+            DensityOptions.add("solid");
+            DensityOptions.add("liquid");
+            DensityOptions.add("gas");
+            DensityOptions.add("n/a");}
+
 
        // Creating adapter for spinner
-       ArrayAdapter<String> dataAdapter6 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, MoistnessOptions);
+       ArrayAdapter<String> dataAdapter6 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, DensityOptions);
 
        // Drop down layout style - list view with radio button
        dataAdapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -183,16 +190,83 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
        spinner6.setAdapter(dataAdapter6);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        Spinner spinner7 = (Spinner) findViewById(R.id.spinner7);
 
+        spinner6.setOnItemSelectedListener(this);
+        List<String> MoistnessOptions = new ArrayList<String>();
+        {MoistnessOptions.add("Select Moistness");
+            MoistnessOptions.add("yes");
+            MoistnessOptions.add("no");}
 
-            }
-        });
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter7 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, MoistnessOptions);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinner7.setAdapter(dataAdapter7);
+        //////////////////////////////////////////////////////////////////////
+        Spinner spinner8 = (Spinner) findViewById(R.id.spinner8);
+
+        spinner6.setOnItemSelectedListener(this);
+        List<String> SunOptions = new ArrayList<String>();
+        {
+            SunOptions.add("Does it involve the sun?");
+            SunOptions.add("yes");
+            SunOptions.add("n/a");
+        }
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter8 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, SunOptions);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter8.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinner8.setAdapter(dataAdapter6);
+        ///////////////////////////////////////////////////////////////
+        Spinner spinner9 = (Spinner) findViewById(R.id.spinner9);
+
+        spinner6.setOnItemSelectedListener(this);
+        List<String> TempOptions = new ArrayList<String>();
+        {
+            TempOptions.add("Is it hot or cold?");
+            TempOptions.add("cold");
+            TempOptions.add("hot");
+            TempOptions.add("n/a");
+        }
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter9 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, TempOptions);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter9.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinner9.setAdapter(dataAdapter9);
+        ////////////////////////////////////////////////////////
+        Spinner spinner10 = (Spinner) findViewById(R.id.spinner10);
+
+        spinner6.setOnItemSelectedListener(this);
+        List<String> PrecipOptions = new ArrayList<String>();
+        {
+            PrecipOptions.add("Is there precipitation?");
+            PrecipOptions.add("source");
+            PrecipOptions.add("no");
+            PrecipOptions.add("yes");
+        }
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter10 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, PrecipOptions);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter10.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinner10.setAdapter(dataAdapter10);
+        //////////////////////////////////////////////////////
+
 
     }
 
