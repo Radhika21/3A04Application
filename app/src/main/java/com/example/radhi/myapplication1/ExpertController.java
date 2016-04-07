@@ -39,12 +39,22 @@ public class ExpertController {
             d.add(a.get(i));}
         MeteorologistController.compareAnswer(d);
            }
+    //
 
     public static String CompareSolvedAnswer(ExpertADT c,ExpertADT d, ExpertADT e) {
 
         ArrayList a = ExpertADT.getSolveAnswer(c);
         ArrayList a1 = ExpertADT.getSolveAnswer(d);
         ArrayList a2 = ExpertADT.getSolveAnswer(e);
+
+        a.add("white");
+        a.add("red");
+        a.add("blue");
+
+        a1.add("white");
+        a1.add("red");
+
+        a2.add("white");
 
         a.retainAll(a1);
         a2.retainAll(a);

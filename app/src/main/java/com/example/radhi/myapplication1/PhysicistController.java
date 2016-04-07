@@ -89,9 +89,9 @@ public class PhysicistController {
     public static void compareAnswer(ArrayList b){
 
         for(int i=0; i < 5;){
-            if (PhysicistDatabase.getColor(PhysicistDatabase.getInfo(i)) == b.get(0) & PhysicistDatabase.getShape(PhysicistDatabase.getInfo(i)) == b.get(1)
-                    & PhysicistDatabase.getOpacity(PhysicistDatabase.getInfo(i)) == b.get(2) & PhysicistDatabase.getAngle(PhysicistDatabase.getInfo(i)) == b.get(3)
-                    &PhysicistDatabase.getElevation(PhysicistDatabase.getInfo(i)) == b.get(4) ){
+            if (PhysicistDatabase.getColor(PhysicistDatabase.getInfo(i)).equals(b.get(0))  && PhysicistDatabase.getShape(PhysicistDatabase.getInfo(i)).equals(b.get(1))
+                    && PhysicistDatabase.getOpacity(PhysicistDatabase.getInfo(i)).equals(b.get(2))  && PhysicistDatabase.getAngle(PhysicistDatabase.getInfo(i)).equals(b.get(3))
+                    &&PhysicistDatabase.getElevation(PhysicistDatabase.getInfo(i)).equals(b.get(4)) ){
                 ExpertADT.setSolveAnswer(i,Physicist1);
             }
             else {i = i + 1;}

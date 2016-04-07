@@ -20,8 +20,8 @@ public class FieldController {
 
     public static void compareAnswer(ArrayList b){
         for(int i=0; i < 2;){
-            if (FieldExpertDatabase.getDensity(FieldExpertDatabase.getInfo(i)) == b.get(0) & FieldExpertDatabase.getMoistness(FieldExpertDatabase.getInfo(i)) == b.get(1))
-                ExpertADT.setSolveAnswer(i,Field);
+            if (FieldExpertDatabase.getDensity(FieldExpertDatabase.getInfo(i)).equals(b.get(0)) && FieldExpertDatabase.getMoistness(FieldExpertDatabase.getInfo(i)).equals(b.get(1))){
+                ExpertADT.setSolveAnswer(i,Field);}
             else {i = i + 1;}
         }
     }

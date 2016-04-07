@@ -53,17 +53,7 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
         //super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main2);
 
-        IdentifyPhenomena a = new IdentifyPhenomena();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                IdentifyPhenomena  cls2= new IdentifyPhenomena();
-                Snackbar.make(view, cls2.b, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -282,7 +272,18 @@ public class Main2Activity extends Activity implements AdapterView.OnItemSelecte
         spinner10.setAdapter(dataAdapter10);
         //////////////////////////////////////////////////////
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                IdentifyPhenomena cls2 = new IdentifyPhenomena();
+                String c = cls2.b;
+
+                Snackbar.make(view, c, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
     }
 
 

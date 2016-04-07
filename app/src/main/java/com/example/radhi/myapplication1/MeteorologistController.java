@@ -20,8 +20,8 @@ public class MeteorologistController {
 
     public static void compareAnswer(ArrayList b){
         for(int i=0; i < 3; ){
-            if (MeteorologistDatabase.getSun(MeteorologistDatabase.getInfo(i)) == b.get(0) & MeteorologistDatabase.getTemp(MeteorologistDatabase.getInfo(i)) == b.get(1)
-                    & MeteorologistDatabase.getPrecip(MeteorologistDatabase.getInfo(i)) == b.get(2)){
+            if (MeteorologistDatabase.getSun(MeteorologistDatabase.getInfo(i)).equals(b.get(0))  && MeteorologistDatabase.getTemp(MeteorologistDatabase.getInfo(i)).equals(b.get(1))
+                    && MeteorologistDatabase.getPrecip(MeteorologistDatabase.getInfo(i)).equals(b.get(2))){
                 ExpertADT.setSolveAnswer(i,Meteorologist);
             }
             else {i = i + 1;}
