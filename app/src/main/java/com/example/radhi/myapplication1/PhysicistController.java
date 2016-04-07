@@ -5,18 +5,39 @@ import android.app.Service;
 import android.content.Intent;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Radhi on 4/6/2016.
  */
 public class PhysicistController {
-    static ArrayList ColorOptions = new ArrayList();
+    static List<String> ColorOptions = new ArrayList<String>();
+    { ColorOptions.add("red");
+        ColorOptions.add("white");
+        ColorOptions.add("rainbow");
+        ColorOptions.add("blue");
+        ColorOptions.add("green");
+        ColorOptions.add("yellow");
+        ColorOptions.add("multiple");
+        ColorOptions.add("not applicable");
+        ColorOptions.add("brown");}
+
+    static List<String> categories = new ArrayList<String>();
+    {categories.add("Automobile");
+    categories.add("Business Services");
+    categories.add("Computers");
+    categories.add("Education");
+    categories.add("Personal");
+    categories.add("Travel");}
+
     static ArrayList OpacityOptions = new ArrayList<String>();
     static ArrayList ElevationOptions = new ArrayList<String>();
     static ArrayList BrightnessOptions = new ArrayList<String>();
     static ArrayList AngleOptions = new ArrayList<String>();
     static ArrayList ShapeOptions = new ArrayList<String>();
     static ArrayList ParametersOptions = new ArrayList();
+    static String[] a = {"white","black","red"};
+
 
   /*  public void onHandleIntent(Intent intent){
         com.example.radhi.myapplication1.PhysicistController.creatingExpert();
@@ -25,7 +46,8 @@ public class PhysicistController {
     }*/
 
     public static ExpertADT creatingExpert(){
-        {ColorOptions.add("red");
+
+        { ColorOptions.add("red");
             ColorOptions.add("white");
             ColorOptions.add("rainbow");
             ColorOptions.add("blue");
@@ -58,6 +80,7 @@ public class PhysicistController {
         ExpertADT.setParametersOptions(Physicist, ParametersOptions);
         ExpertADT.setNumCat(Physicist, 6);
         ExpertADT.setIDNumber(Physicist, 0);
+        a = (String[]) PhysicistController.ColorOptions.toArray();
 
         return Physicist;
 
